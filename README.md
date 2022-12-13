@@ -68,5 +68,9 @@ Kleurgebruik
 	- Github
 - Gerard: transparantie code en commentaar beoordelen
 
-## Einde print
+## Einde sprint
 Woensdag 10:00 uur oplevering
+
+## Presentatie
+Donderdagmorgen
+
