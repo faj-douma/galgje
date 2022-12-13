@@ -6,7 +6,7 @@ import timeit
 class GalgjeApi:
 
     __url = "http://beprek.nl/galgje"
-    pincode = 0
+    pincode = -1
     teradenwoord = ''
     total_duration = 0.0
 
