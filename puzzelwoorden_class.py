@@ -115,11 +115,4 @@ class Puzzelwoorden:
         return retval
 
 
-#pw = Puzzelwoorden('woorden.txt')
-#print (pw.letter_uit_frequentiestring('erjan'))
 
-#print (pw.lijst_voldoet_aan_masker('ri___en','enri'))
-#print(pw.meest_voorkomende_letter('ri___en','enri'))
-
-#print (pw.lijst_voldoet_aan_masker('_____','enr'))
-#print(pw.meest_voorkomende_letter('_____','enr'))
