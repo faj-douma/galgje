@@ -70,6 +70,3 @@ Kleurgebruik
 
 ## Einde print
 Woensdag 10:00 uur oplevering
-
-
-![image](https://user-images.githubusercontent.com/120382716/207269182-e16735db-25f0-43d2-a439-d69f3196cd23.png)
