@@ -74,3 +74,4 @@ Woensdag 10:00 uur oplevering
 ## Presentatie
 Donderdagmorgen
 
+![Screenshot van Galgje](/galgje_menu.png "Galgje menu")
