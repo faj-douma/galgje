@@ -18,6 +18,7 @@ class Galgje:
 
     def __init__(self, puzzelwoorden):
             self.api = GalgjeApi()
+            self.pincode = self.api.pincode
             self.teradenwoord = self.api.teradenwoord
             self.puzzelwoorden = puzzelwoorden
 
