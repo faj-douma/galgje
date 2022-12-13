@@ -2,6 +2,7 @@ from galgje_api_class import APIresponse, GalgjeApi
 from puzzelwoorden_class import Puzzelwoorden
 from galgje_visualizer_class import GalgjeVisualizer
 import timeit
+import re
 
 class Galgje:
 
@@ -55,7 +56,7 @@ class Galgje:
     def __vraag_letter(self):
         while True:
             letter = input("Welke letter kies je? ")
-            if len(letter)>0:
+            if len(letter)>0 and re.match(r'^[A-Za-z]+$', letter):
                 return letter[0].lower()
             else:
                 print('Ongeldige invoer...')    
