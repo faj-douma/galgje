@@ -1,6 +1,6 @@
 # galgje
 
-Groepsoverleg, Arno met Teams
+**Groepsoverleg, Arno met Teams**
 
 Uitleg opdracht aan leden van de groep
 
