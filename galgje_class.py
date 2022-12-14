@@ -3,7 +3,7 @@ from galgje_api_class import APIresponse, GalgjeApi #Class die de communicatie m
 from puzzelwoorden_class import Puzzelwoorden #Classe voor het aanmaken van de puzzelwoorden
 from galgje_visualizer_class import GalgjeVisualizer #Class voor het visueel weergeven van het Galgje mannetje
 import timeit #module om verstreken tijd te meten tijdens het spelen van Galgje
-import re #Module om reguliere expressies toe te passen
+import re # Module om reguliere expressies toe te passen
 
 class Galgje:
 
