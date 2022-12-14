@@ -25,5 +25,5 @@ class Splash:                 # Lees plaatje in en toon dit in het midden van he
         label.pack()    
         root.after(self.timer, root.destroy)
         mainloop()
-
-#Splash('c:/apps/python/galgje/sprint/galgje.png', 3000).splashscreen()
+#Test
+#Splash('galgje.png', 3000).splashscreen()
