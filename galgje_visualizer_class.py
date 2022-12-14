@@ -114,5 +114,5 @@ class GalgjeVisualizer:
         
     def PrintGalgje(self, aantalPogingen): 
         if aantalPogingen > 0:
-            aantalPogingen = aantalPogingen -1
+            aantalPogingen = aantalPogingen
         return "\n" + self.galgjeLijst[aantalPogingen]
