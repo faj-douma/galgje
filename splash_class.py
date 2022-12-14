@@ -26,4 +26,4 @@ class Splash:                 # Lees plaatje in en toon dit in het midden van he
         root.after(self.timer, root.destroy)
         mainloop()
 #Test
-#Splash('galgje.png', 3000).splashscreen()
+#Splash('rudi.png', 3000).splashscreen()

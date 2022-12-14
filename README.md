@@ -4,10 +4,10 @@ Teamopdracht IT Academy Noord-Nederland
 
 ## Scrum meeting 1
 
-Uitleg opdracht aan leden van de groep
-Afstemming groepsopdracht en beoordelingscriteria
-Notulist: Anco
-Scrum master: Arjen Douma
+Uitleg opdracht aan leden van de groep  
+Afstemming groepsopdracht en beoordelingscriteria  
+Scrum master: Arjen Douma  
+Logger: Anco Postma  
 
 ### Sprint 1
 
@@ -21,20 +21,20 @@ Scrum master: Arjen Douma
 - Easteregg: interactieve modus
 
 **Brainstormsessie**
-Woordenlijst: samenstellen met aantal karakters
-Pattern matching: woordenlijst samenstellen die overeen komen met pattern 
--> meest voorkomende letters in deze lijst samenstellen
-Masker gebruiken (van de onderscores) om de woorden te vergelijken
-Klassen, switch of je een gui wilt of niet. Zo ja, waar op het scherm.
+Woordenlijst: samenstellen met aantal karakters  
+Pattern matching: woordenlijst samenstellen die overeen komen met pattern   
+-> meest voorkomende letters in deze lijst samenstellen  
+Masker gebruiken (van de onderscores) om de woorden te vergelijken  
+Klassen, switch of je een gui wilt of niet. Zo ja, waar op het scherm.  
+  
+Gui: presentatie met galgje. Meerdere tegelijk?  
 
-Gui: presentatie met galgje. Meerdere tegelijk?
+*Eerst eenvoudige presentatie*  
+Handmatig of door PC, handmatig, eventueel met hints.  
+Handmatig met galgje.  
+Spraakgestuurd (google api)?  
 
-*Eerst eenvoudige presentatie*
-Handmatig of door PC, handmatig, eventueel met hints.
-Handmatig met galgje.
-Spraakgestuurd (google api)?
-
-Uitwerking taakverdeling:
+Uitwerking taakverdeling:  
 
 **Userstory: geautomatiseerd woord oplossen**
 - Anco: Proces  (scrum)
@@ -54,7 +54,7 @@ Uitwerking taakverdeling:
 	- Easeregg
 	- Speach recognition
 	
-## Sprint 2
+### Sprint 2
 
 **Menu met vraag hoeveel spelletjes**
 - Anco: Code voorzien van commentaar
@@ -75,3 +75,10 @@ Woensdag 10:00 uur oplevering
 Donderdagmorgen
 
 ![Screenshot van Galgje](/galgje_menu.png "Galgje menu")
+
+## Modules
+De volgende modules moeten geïnstalleerd zijn:
+- requests
+- pillow
+- colorama
+Installatie met pip install <modulenaam>
