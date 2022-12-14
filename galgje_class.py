@@ -73,8 +73,7 @@ class Galgje:
             teradenletter = self.__vraag_letter()  #Hier wordt naar de functie vraag_letter verwezen
 
             self.letterhistorie = self.letterhistorie + teradenletter # Bijhouden van de reeds gekozen letters op basis van te raden letter en historie
-            if self.letterhistorie[-4:]=="rudi":
-                Splash('rudi.png', 3000).splashscreen()
+
             response = self.api.raadletter(teradenletter) # letter doorsturen naar de API
             self.teradenwoord = response.geradenletters
             self.aantalpogingen = response.pogingen
