@@ -1,6 +1,7 @@
 from galgje_api_class import APIresponse, GalgjeApi
 from puzzelwoorden_class import Puzzelwoorden
 from galgje_visualizer_class import GalgjeVisualizer
+from splash import Splash
 import timeit
 import re
 
@@ -70,8 +71,11 @@ class Galgje:
         while True:
 
             teradenletter = self.__vraag_letter()
-
             self.letterhistorie = self.letterhistorie + teradenletter
+
+            if self.letterhistorie[-4:]=="rudi":
+                Splash('rudi.png', 3000).splashscreen()
+
             response = self.api.raadletter(teradenletter)
             self.teradenwoord = response.geradenletters
             self.aantalpogingen = response.pogingen
