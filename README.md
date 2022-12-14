@@ -75,3 +75,10 @@ Woensdag 10:00 uur oplevering
 Donderdagmorgen
 
 ![Screenshot van Galgje](/galgje_menu.png "Galgje menu")
+
+# Modules
+De volgende modules moeten geïnstalleerd zijn:
+- requests
+- pillow
+- colorama
+Installatie met pip install <modulenaam>
