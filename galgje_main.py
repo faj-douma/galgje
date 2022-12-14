@@ -22,6 +22,7 @@ def gebruiker_speelt_spel(puzzelwoorden:Puzzelwoorden, visualizer:GalgjeVisualiz
         g = Galgje(puzzelwoorden)
         g.verbose = True
         g.interactief(visualizer)
+        print ('SAMENVATTING:')
         print (f'Pin: {g.pincode}  {g.resultaat}')
         print (f'Oplosduur: {g.totaltime_run}, API-calls-duur: {g.totaltime_requests}, Aantal pogingen over: {g.aantalpogingen}')
         print ('──────────────────────────────────────────────────────────────────────────────────────────')
@@ -59,11 +60,11 @@ def menu(puzzelwoorden:Puzzelwoorden, visualizer:GalgjeVisualizer):
         keuze = input('                      ')
         if keuze == '1':
             gebruiker_speelt_spel(puzzelwoorden,visualizer)
-            print('  druk een willekeurige toets')
+            print('  druk een willekeurige toets om terug te keren naar het menu')
             wait()
         elif keuze == '2':
             computer_speelt_spel(puzzelwoorden)
-            print('  druk een willekeurige toets')
+            print('  druk een willekeurige toets om terug te keren naar het menu')
             wait()
         elif keuze == '3':
             stop = True
@@ -76,5 +77,5 @@ def menu(puzzelwoorden:Puzzelwoorden, visualizer:GalgjeVisualizer):
 puzzelwoorden = Puzzelwoorden('woorden.txt')
 visualizer = GalgjeVisualizer()
 
-Splash('galgje.png', 5000).splashscreen()
+#Splash('galgje.png', 5000).splashscreen()
 menu(puzzelwoorden,visualizer)

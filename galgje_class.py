@@ -44,6 +44,7 @@ class Galgje:
             if response.pogingen == 0:
                 self.__printregel("HELAAS, het woord is niet geraden")
                 self.resultaat = 'NIET GERADEN: ' + self.teradenwoord
+                self.__printregel(f"Woord dat geraden moest worden: {response.resultaat['woord dat geraden moest worden']}\n\n")
                 break
 
             if self.teradenwoord.find('_') == -1:
@@ -75,12 +76,13 @@ class Galgje:
             self.teradenwoord = response.geradenletters
             self.aantalpogingen = response.pogingen
 
-            print(galgjevisualizer.PrintGalgje(response.pogingen))
+            self.__printregel(galgjevisualizer.PrintGalgje(response.pogingen))
             self.__printregel(response.spelstatus + ' ' + self.teradenwoord + ' #pogingen over: ' + str(response.pogingen))
 
             if response.pogingen == 0:
                 self.__printregel("HELAAS, het woord is niet geraden")
                 self.resultaat = 'NIET GERADEN: ' + self.teradenwoord
+                self.__printregel(f"Woord dat geraden moest worden: {response.resultaat['woord dat geraden moest worden']}\n\n")
                 break
 
             if self.teradenwoord.find('_') == -1:
