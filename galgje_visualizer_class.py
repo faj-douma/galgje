@@ -110,9 +110,19 @@ class GalgjeVisualizer:
                                 |               
                                 |___
                         
-                            """]
+                            """,
+                           """
+                               __________
+                                |/         
+                                |       
+                                |              
+                                |           
+                                |           
+                                |               
+                                |___
+                        
+                            """                            
+                            ]
         
     def PrintGalgje(self, aantalPogingen): 
-        if aantalPogingen > 0:
-            aantalPogingen = aantalPogingen
         return "\n" + self.galgjeLijst[aantalPogingen]
