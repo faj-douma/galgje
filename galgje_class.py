@@ -2,7 +2,7 @@
 from galgje_api_class import APIresponse, GalgjeApi #Class die de communicatie met de webserver doet
 from puzzelwoorden_class import Puzzelwoorden #Classe voor het aanmaken van de puzzelwoorden
 from galgje_visualizer_class import GalgjeVisualizer #Class voor het visueel weergeven van het Galgje mannetje
-from splash import Splash
+from splash_class import Splash
 import timeit #module om verstreken tijd te meten tijdens het spelen van Galgje
 import re # Module om reguliere expressies toe te passen
 
@@ -73,7 +73,8 @@ class Galgje:
 
             teradenletter = self.__vraag_letter()  #Hier wordt naar de functie vraag_letter verwezen
 
-            self.letterhistorie = self.letterhistorie + teradenletter # Bijhouden van de reeds gekozen letters op basis van te raden letter en historie
+            if not teradenletter in self.letterhistorie:
+                self.letterhistorie = self.letterhistorie + teradenletter # Bijhouden van de reeds gekozen letters op basis van te raden letter en historie
 
             if self.letterhistorie[-4:]=="rudi":
                 Splash('rudi.png', 3000).splashscreen()
@@ -83,7 +84,7 @@ class Galgje:
             self.aantalpogingen = response.pogingen
 
             self.__printregel(galgjevisualizer.PrintGalgje(response.pogingen))
-            self.__printregel(response.spelstatus + ' ' + self.teradenwoord + ' #pogingen over: ' + str(response.pogingen)) # Toon aan gebruiker de resterende pogingen
+            self.__printregel(f"{response.spelstatus} {self.teradenwoord} #pogingen over: {str(response.pogingen)}  letterhistorie: {self.letterhistorie}") # Toon aan gebruiker de resterende pogingen
 
             if response.pogingen == 0:  #Wanneer het aantal pogingen 0 is is het woord niet geraden
                 self.__printregel("HELAAS, het woord is niet geraden")

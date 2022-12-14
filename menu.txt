@@ -3,9 +3,10 @@
 ├────────────────────────────────────────────────────────────────────────────────────────┤
 |       |             Maak een keuze uit het volgende menu:                              |
 |      (_)                                                                               |
-|      /|\            1) Zelf een spelletje spelen                                       |
+|      /|\            1) Zelf een spelletje spelen met hints van de computer             |
 |       |             2) Laat de computer woorden raden                                  |
-|      / \            3) Stop het programma                                              |
+|      / \            3) Laat statistieken zien                                          |
+|                     4) Stop programma                                                  |
 |                                                                                        |
 |                     Wat is uw keuze?                                                   |
 └────────────────────────────────────────────────────────────────────────────────────────┘
