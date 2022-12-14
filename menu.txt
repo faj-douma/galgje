@@ -3,7 +3,7 @@
 ├────────────────────────────────────────────────────────────────────────────────────────┤
 |       |             Maak een keuze uit het volgende menu:                              |
 |      (_)                                                                               |
-|      /|\            1) Zelf een spelletje spelen met hints van de computer             |
+|      /|\            1) Zelf een spelletje spelen              |
 |       |             2) Laat de computer woorden raden                                  |
 |      / \            3) Stop het programma                                              |
 |                                                                                        |
