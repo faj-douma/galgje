@@ -8,7 +8,7 @@ import re # Module om reguliere expressies toe te passen
 
 class Galgje:
 
-    pincode = 0 # Initieer de variable met 0
+    pincode = -1 # Initieer de variable met -1
     api:GalgjeApi = None # wordt geinitieerd later
     verbose = True #Zet op False om geen verbose logging op het scherm te zien (zie __printregel)
     puzzelwoorden:Puzzelwoorden = None # Aanmaken van een lege variable
@@ -64,7 +64,7 @@ class Galgje:
             else:
                 print('Ongeldige invoer...')    # bij ongeldige invoer verschijnt een foutmelding
 
-
+    #Functie om het galgje-spel interactief te spelen
     def interactief(self, galgjevisualizer:GalgjeVisualizer):
         starttime = timeit.default_timer()
         self.__printregel("NIEUW SPEL\nTe raden woord is: " + self.teradenwoord + ' met een lengte van ' + str(len(self.teradenwoord)) + ' karakters')

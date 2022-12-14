@@ -9,20 +9,25 @@ from os import path, system, name
 import msvcrt as m
 from colorama import Fore, Style
 
+#Menu wordt geladen uit bestand menu.txt en de tekst wordt geretourneerd
 def laadmenu():
     bestandsnaam = 'menu.txt'
     f = open(bestandsnaam, encoding="UTF-8")
+    #lees het hele bestand
     menuregels = f.read()
     f.close()
     return menuregels
 
+#Toon statistieken. Gebruik de historie uit een bestand
 def laat_stats_zien():
     bestandsnaam = "galgje_statistieken.json"
+    #Als er geen bestand is met statistieken, zeg dat dan
     if not path.exists(bestandsnaam):
             print("Er zijn nog geen statistieken bekend")    
     else:
         with open(bestandsnaam, "r") as file:
             print('──────────────────────────────────────────────────────────────────────────────────────────')
+            #Toon elke key value waarde in het bestand
             for k, v in json.load(file).items():
                 print(f"{k}: {v}")
             print('──────────────────────────────────────────────────────────────────────────────────────────')
@@ -30,6 +35,7 @@ def laat_stats_zien():
 def wait():         # Druk een toets om door te gaan
     m.getch()
 
+#Functie om keuze 'interactief' te doen.
 def gebruiker_speelt_spel(puzzelwoorden:Puzzelwoorden, visualizer:GalgjeVisualizer):
     try:
         g = Galgje(puzzelwoorden)
@@ -40,12 +46,15 @@ def gebruiker_speelt_spel(puzzelwoorden:Puzzelwoorden, visualizer:GalgjeVisualiz
         print (f'Oplosduur: {g.totaltime_run}, API-calls-duur: {g.totaltime_requests}, Aantal pogingen over: {g.aantalpogingen}')
         print ('──────────────────────────────────────────────────────────────────────────────────────────')
     except:
-        print ('Kon geen instantie van Galgje maken...')
+        print ('Er is een fout opgetreden in de functie "gebruiker_speelt_spel"')
 
+#Functie om keuze 'computer speelt spel' te doen
 def computer_speelt_spel(puzzelwoorden:Puzzelwoorden):
+    #statistieken worden hiervoor bijgehouden
     stats = GalgjeStatistics()
     aantal = int(input('  Hoeveel spelletjes wil je spelen? '))
     print('──────────────────────────────────────────────────────────────────────────────────────────')
+    #Een lus om het precieze aantal spelletjes uit te laten voeren door de computer
     for i in range(aantal):
         try:
             g = Galgje(puzzelwoorden)
@@ -57,7 +66,7 @@ def computer_speelt_spel(puzzelwoorden:Puzzelwoorden):
             print ('──────────────────────────────────────────────────────────────────────────────────────────')
             
         except:
-            print ('Kon geen instantie van Galgje maken...')
+            print ('Er is een fout opgetreden in de functie "computer_speelt_spel"')
 
 def clear():            # define our clear function
     # for windows
@@ -67,8 +76,12 @@ def clear():            # define our clear function
     else:
         _ = system('clear')
 
+#Dit is de functie om het menu daadwerkelijk te tonen en uit te voeren.
+#parameters zijn: puzzelwoorden en een instantie van GalgjeVisualizer.
+#De laatste zorgt voor het tonen van een galg
 def menu(puzzelwoorden:Puzzelwoorden, visualizer:GalgjeVisualizer):   
     menu = laadmenu()
+    #oneindige loop
     while True:
         clear()
         print(f'\n{Fore.GREEN}{menu}')
@@ -86,15 +99,19 @@ def menu(puzzelwoorden:Puzzelwoorden, visualizer:GalgjeVisualizer):
             print('  druk een willekeurige toets om terug te keren naar het menu')
             wait()
         elif keuze == '4':
-            stop = True
             print(f'{Style.RESET_ALL}')
+            #Stap uit de 'oneindige' loop
             break
         else:
             print('  Ongeldige keuze, probeer het nogmaals...')
             time.sleep(2)
 
+#Maak instantie van Puzzelwoorden
 puzzelwoorden = Puzzelwoorden('woorden.txt')
+#Maak instantie van GalgjeVisualizer
 visualizer = GalgjeVisualizer()
 
+#Toon Splash-screen
 Splash('galgje.png', 5000).splashscreen()
+#Start het menu
 menu(puzzelwoorden,visualizer)
